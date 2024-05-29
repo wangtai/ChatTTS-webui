@@ -1,4 +1,28 @@
-# ChatTTS
+# ChatTTS demo
+
+the ChatTTS webui
+
+![the webui image looklike](images/webui_image.png)
+
+## webui start
+
+start webui.py
+```bash
+python webui.py
+
+python webui.py --server_port=8080
+```
+
+## install
+```bash
+conda create -n chattts  python=3.9
+conda activate chattts
+
+conda install pytorch torchvision torchaudio pytorch-cuda=11.8 -c pytorch -c nvidia
+pip install omegaconf vocos transformers vector-quantize-pytorch
+```
+
+
 [**English**](./README.md) | [**中文简体**](./README_CN.md)
 
 ChatTTS is a text-to-speech model designed specifically for dialogue scenario such as LLM assistant. It supports both English and Chinese languages. Our model is trained with 100,000+ hours composed of chinese and english. The open-source version on HuggingFace is a 40,000 hours pre trained model without SFT.
